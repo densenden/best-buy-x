@@ -19,10 +19,15 @@ class Product:
         return self.quantity
 
     def set_quantity(self, quantity):
-        raise NotImplementedError(f"note by densenden:\nfunction not implemented yet")
+        if quantity < 0:
+            raise ValueError("We cannot handle negative stock.")
 
-    def is_active(self):  # -> bool
-        raise NotImplementedError(f"note by densenden:\nfunction not implemented yet")
+        self.quantity = quantity
+
+        self.active = quantity > 0
+
+    def is_active(self):
+        return self.active
 
     def activate(self):
         raise NotImplementedError(f"note by densenden:\nfunction not implemented yet")
