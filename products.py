@@ -36,7 +36,7 @@ class Product:
         self.active = False
 
     def show(self):  # -> str
-        raise NotImplementedError(f"note by densenden:\nfunction not implemented yet")
+        return f"{self.name}, Price: {self.price}, Quantity: {self.quantity}"
 
     def buy(self, quantity): # -> float
         raise NotImplementedError(f"note by densenden:\nfunction not implemented yet")
