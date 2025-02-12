@@ -8,14 +8,14 @@ def test_add_product():
     mac = Product("MacBook Air M2", price=1450, quantity=100)
     best_buy = Store([bose])
     best_buy.add_product(mac)
-    assert mac in best_buy.products
+    assert mac in best_buy.storage
 
 
 def test_remove_product():
     bose = Product("Bose QuietComfort Earbuds", price=250, quantity=500)
     best_buy = Store([bose])
     best_buy.remove_product(bose)
-    assert bose not in best_buy.products
+    assert bose not in best_buy.storage
 
 
 def test_get_total_quantity():
