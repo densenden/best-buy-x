@@ -16,7 +16,7 @@ class Product:
         self.active = True
 
     def get_quantity(self):  # -> float
-        raise NotImplementedError(f"note by densenden:\nfunction not implemented yet")
+        return self.quantity
 
     def set_quantity(self, quantity):
         raise NotImplementedError(f"note by densenden:\nfunction not implemented yet")
