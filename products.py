@@ -30,10 +30,10 @@ class Product:
         return self.active
 
     def activate(self):
-        raise NotImplementedError(f"note by densenden:\nfunction not implemented yet")
+        self.active = True
 
     def deactivate(self):
-        raise NotImplementedError(f"note by densenden:\nfunction not implemented yet")
+        self.active = False
 
     def show(self):  # -> str
         raise NotImplementedError(f"note by densenden:\nfunction not implemented yet")
