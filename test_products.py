@@ -71,3 +71,5 @@ def test_buy():
     product.buy(90)  # Buy all remaining quantity
     assert product.quantity == 0
     assert product.is_active() is False  # Product should be deactivated
+
+

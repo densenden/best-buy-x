@@ -1,7 +1,10 @@
 class Product:
 
     def __init__(self, name, price, quantity):
-        raise NotImplementedError(f"note by densenden:\nfunction not implemented yet")
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+        self.active = True
 
     def get_quantity(self):  # -> float
         raise NotImplementedError(f"note by densenden:\nfunction not implemented yet")
