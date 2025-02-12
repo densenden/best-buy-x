@@ -39,5 +39,16 @@ class Product:
         return f"{self.name}, Price: {self.price}, Quantity: {self.quantity}"
 
     def buy(self, quantity): # -> float
-        raise NotImplementedError(f"note by densenden:\nfunction not implemented yet")
+        # enough there?
+        if quantity > self.quantity:
+            raise ValueError(f"We do not have enough {self.name} in stock. Please order maximum {self.quantity} {self.name}")
+        if quantity < 0:
+            raise ValueError("We cannot handle negative orders.")
+        if quantity == self.quantity:
+            self.active = False
+
+        self.quantity = self.quantity - quantity
+
+        return int(self.price * quantity)
+
 
